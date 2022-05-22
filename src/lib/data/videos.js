@@ -10,9 +10,9 @@ export const VIDEOS = {
 		night: 'City-night-c.mp4'
 	},
 	desert: {
-		day: 'Desert-day-T.mp4',
-		sunset: 'Desert-sunset-B.mp4',
-		night: 'Desert-night-6.mp4'
+		day: 'Snow/Desert-day-T.mp4',
+		sunset: 'Snow/Desert-sunset-B.mp4',
+		night: 'Snow/Desert-night-6.mp4'
 	},
 	egypt: {
 		day: 'Egypt-day-D.mp4',
