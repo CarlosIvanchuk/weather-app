@@ -1,5 +1,5 @@
 import type { RequestEvent } from '@sveltejs/kit';
-import type { Current, Location } from '$lib/types'
+import type { Location, Current } from '$lib/types';
 
 const FETCH_OPTIONS = {
 	method: 'GET',
@@ -22,8 +22,8 @@ export async function get(event: RequestEvent) {
 
 	const data = await response.json();
 
-	const {location, current}: {location: Location, current: Current} = data;
-	
+	const { location, current }: { location: Location; current: Current } = data;
+
 	const body = {
 		location,
 		current
