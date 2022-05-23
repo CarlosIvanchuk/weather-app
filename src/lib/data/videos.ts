@@ -8,7 +8,7 @@ export interface Video {
 	night: string;
 }
 
-export const VIDEOS: IVideoRecord = {
+export const VIDEOS_BY_PLACE: IVideoRecord = {
 	china: {
 		day: 'China-day.mp4',
 		sunset: 'China-sunset.mp4',
@@ -118,5 +118,80 @@ export const VIDEOS: IVideoRecord = {
 		day: 'Valley-day-H.mp4',
 		sunset: 'Valley-sunset.mp4',
 		night: 'Valley-night-B.mp4'
+	}
+};
+
+export const VIDEOS_BY_TIME = {
+	day: {
+		china: 'China-day.mp4',
+		city: 'City-day.mp4',
+		desert: 'Snow/Desert-day-T.mp4',
+		egypt: 'Egypt-day-D.mp4',
+		forest: 'Forest-day-Q.mp4',
+		france: 'France-day.mp4',
+		hillsAndMountains: 'HillsandMountains-day.mp4',
+		india: 'India-day.mp4',
+		indonesia: 'Indonesia-day-l.mp4',
+		italy: 'Italy-day.mp4',
+		itsukishimaGateJapan: 'ItsukishimaGateJapan-day.mp4',
+		japanMtFuji: 'Lake-day-J.mp4',
+		lake: 'London-day.mp4',
+		london: 'Mt.FujiJapan-day.mp4',
+		philippines: 'Philippines-day.mp4',
+		seaTheLighthouse: 'SeaLighthouse-day.mp4',
+		seaTheShip: 'SeaShip-day.mp4',
+		snow: 'snow-day.mp4',
+		street: 'Street-day-X.mp4',
+		tropical: 'Tropical-day.mp4',
+		usa: 'USA-day.mp4',
+		valley: 'Valley-day-H.mp4'
+	},
+	sunset: {
+		china: 'China-sunset.mp4',
+		city: 'City-sunset-9.mp4',
+		desert: 'Snow/Desert-sunset-B.mp4',
+		egypt: 'Egypt-sunset-n.mp4',
+		forest: 'Forest-sunset-4.mp4',
+		france: 'France-sunset-i.mp4',
+		hillsAndMountains: 'HillsandMountains-sunset.mp4',
+		india: 'India-sunset.mp4',
+		indonesia: 'Indonesia-sunset-j.mp4',
+		italy: 'Italy-sunset-r.mp4',
+		itsukishimaGateJapan: 'ItsukishimaGateJapan-sunset.mp4',
+		japanMtFuji: 'Lake-sunset-L.mp4',
+		lake: 'London-sunset.mp4',
+		london: 'Mt.FujiJapan-sunset.mp4',
+		philippines: 'Philippines-sunset.mp4',
+		seaTheLighthouse: 'SeaLighthouse-sunset.mp4',
+		seaTheShip: 'SeaShip-sunset.mp4',
+		snow: 'snow-sunset-2.mp4',
+		street: 'Street-sunset-z.mp4',
+		tropical: 'Tropical-sunset.mp4',
+		usa: 'USA-sunset-L.mp4',
+		valley: 'Valley-sunset.mp4'
+	},
+	night: {
+		china: 'China-night-s.mp4',
+		city: 'City-night-c.mp4',
+		desert: 'Snow/Desert-night-6.mp4',
+		egypt: 'Egypt-night-0.mp4',
+		forest: 'Forest-night-A.mp4',
+		france: 'France-night-4.mp4',
+		hillsAndMountains: 'HillsandMountains-night.mp4',
+		india: 'India-night.mp4',
+		indonesia: 'Indonesia-night.mp4',
+		italy: 'Italy-night.mp4',
+		itsukishimaGateJapan: 'ItsukishimaGateJapan-night.mp4',
+		japanMtFuji: 'Lake-night-N.mp4',
+		lake: 'London-night.mp4',
+		london: 'Mt.FujiJapan-night.mp4',
+		philippines: 'Philippines-night.mp4',
+		seaTheLighthouse: 'SeaLighthouse-night.mp4',
+		seaTheShip: 'SeaShip-night.mp4',
+		snow: 'snow-night.mp4',
+		street: 'Street-night.mp4',
+		tropical: 'Tropical-night.mp4',
+		usa: 'USA-night.mp4',
+		valley: 'Valley-night-B.mp4'
 	}
 };
