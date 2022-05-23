@@ -1,4 +1,14 @@
-export const VIDEOS = {
+export interface IVideoRecord {
+	[key: string]: Video;
+}
+
+export interface Video {
+	day: string;
+	sunset: string;
+	night: string;
+}
+
+export const VIDEOS: IVideoRecord = {
 	china: {
 		day: 'China-day.mp4',
 		sunset: 'China-sunset.mp4',

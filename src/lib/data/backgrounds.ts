@@ -1,4 +1,14 @@
-export const BACKGROUNDS = {
+export interface IBackgroundRecord {
+	[key: string]: Background;
+}
+
+export interface Background {
+	day: string;
+	sunset: string;
+	night: string;
+}
+
+export const BACKGROUNDS: IBackgroundRecord = {
 	china: {
 		day: 'china-day.png',
 		sunset: 'china-sunset.png',
