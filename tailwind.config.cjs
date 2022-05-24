@@ -11,6 +11,8 @@ const config = {
 		}
 	},
 
+	darkMode: 'class',
+
 	plugins: []
 };
 
