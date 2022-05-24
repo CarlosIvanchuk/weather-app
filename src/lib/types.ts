@@ -7,7 +7,7 @@ export type Location = {
 	tz_id: string;
 	localtime_epoch: number;
 	localtime: string;
-}
+};
 
 export type Current = {
 	last_updated_epoch: number;
@@ -37,4 +37,4 @@ export type Current = {
 	uv: number;
 	gust_mph: number;
 	gust_kph: number;
-}
+};
