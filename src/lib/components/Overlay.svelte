@@ -16,9 +16,7 @@
 			class="fixed inset-0 bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
 			aria-hidden="true"
 		/>
-		<div
-			class="relative h-full bg-white w-72 sm:w-80 p-6 dark:bg-slate-800"
-		>
+		<div class="relative h-full bg-white w-72 sm:w-80 p-6 dark:bg-slate-800">
 			<button
 				on:click={toggleOverlay}
 				type="button"
@@ -130,7 +128,7 @@
 									: ''} flex-1 ml-3 whitespace-nowrap">Saved Locations</span
 							>
 							<span
-								class="inline-flex justify-center items-center p-3 ml-3 w-3 h-3 text-sm font-medium text-blue-600 bg-blue-200 rounded-full dark:bg-blue-900 dark:text-blue-200"
+								class="inline-flex justify-center items-center p-3 ml-3 w-3 h-3 text-sm font-medium text-blue-600 bg-blue-200 rounded-full dark:bg-blue-800 dark:text-blue-100"
 								>3</span
 							>
 						</a>
