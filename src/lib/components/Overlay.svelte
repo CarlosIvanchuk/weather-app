@@ -1,24 +1,21 @@
 <script>
 	import { page } from '$app/stores';
+	import { overlay } from '$lib/stores';
 	import Logo from './Logo.svelte';
-
-	let open = true;
-
-	function toggleOverlay() {
-		open = !open;
-	}
 </script>
 
-{#if open}
+{#if $overlay}
 	<div class="fixed z-50 inset-0 overflow-y-auto lg:hidden">
 		<div
-			on:click={toggleOverlay}
+			on:click={overlay.close}
 			class="fixed inset-0 bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
 			aria-hidden="true"
 		/>
-		<div class="relative h-full bg-white w-72 sm:w-80 p-6 dark:bg-slate-800">
+		<div
+			class="relative h-full bg-white w-72 sm:w-80 p-6 dark:bg-slate-800"
+		>
 			<button
-				on:click={toggleOverlay}
+				on:click={overlay.close}
 				type="button"
 				class="absolute z-10 top-4 right-4 w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
 				tabindex="0"
@@ -41,6 +38,7 @@
 				<ul class="space-y-4">
 					<li>
 						<a
+							on:click={overlay.close}
 							href="/"
 							class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg group dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
 						>
@@ -70,6 +68,7 @@
 					</li>
 					<li>
 						<a
+							on:click={overlay.close}
 							href="/map"
 							class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg group dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
 						>
@@ -102,6 +101,7 @@
 					</li>
 					<li>
 						<a
+							on:click={overlay.close}
 							href="/saved"
 							class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg group dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
 						>
@@ -137,6 +137,7 @@
 				<ul class="pt-6 mt-6 space-y-4 border-t border-gray-200 dark:border-gray-700">
 					<li>
 						<a
+							on:click={overlay.close}
 							href="/settings"
 							class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg group dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
 						>
@@ -166,6 +167,7 @@
 					</li>
 					<li>
 						<a
+							on:click={overlay.close}
 							href="/about"
 							class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
 						>
