@@ -1,4 +1,4 @@
-export const SUGGESTED_CITIES_ES = [
+export const SUGGESTED_CITIES_ES: string[] = [
 	'Pekín',
 	'Shanghái',
 	'Hong Kong',
