@@ -13,7 +13,7 @@ const config = {
 
 	darkMode: 'class',
 
-	plugins: []
+	plugins: [require('@tailwindcss/forms')]
 };
 
 module.exports = config;
