@@ -6,7 +6,7 @@
 </script>
 
 {#if $overlay}
-	<div class="fixed z-50 inset-0 overflow-y-auto lg:hidden">
+	<div class="fixed inset-0 z-50 overflow-y-auto lg:hidden">
 		<div
 			transition:fade={{ duration: 300 }}
 			on:click={overlay.close}
@@ -16,17 +16,17 @@
 		<div
 			in:fly={{ x: -300, duration: 300, easing: cubicInOut, opacity: 1 }}
 			out:fly={{ x: -300, duration: 300, easing: cubicInOut, opacity: 1 }}
-			class="relative h-full bg-white w-72 sm:w-80 p-6 dark:bg-slate-800"
+			class="relative h-full w-72 bg-white p-6 dark:bg-slate-800 sm:w-80"
 		>
 			<button
 				transition:fade
 				on:click={overlay.close}
 				type="button"
-				class="absolute z-10 top-4 right-4 w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
+				class="absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
 				tabindex="0"
 				><span class="sr-only">Close navigation</span><svg
 					viewBox="0 0 10 10"
-					class="w-2.5 h-2.5 overflow-visible"
+					class="h-2.5 w-2.5 overflow-visible"
 					><path
 						d="M0 0L10 10M10 0L0 10"
 						fill="none"

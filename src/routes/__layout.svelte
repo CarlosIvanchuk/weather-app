@@ -10,11 +10,11 @@
 </div>
 
 <!-- Desktop -->
-<div class="hidden md:flex h-screen">
+<div class="hidden h-screen md:flex">
 	<aside
-		class="hidden lg:block py-4 px-3 dark:bg-gray-800 w-72 overflow-y-auto h-screen border-r border-gray-200 dark:border-gray-700"
+		class="hidden h-screen w-72 overflow-y-auto border-r border-gray-200 py-4 px-3 dark:border-gray-700 dark:bg-gray-800 lg:block"
 	>
-		<NavContent/>
+		<NavContent />
 	</aside>
 
 	<slot />

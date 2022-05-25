@@ -4,8 +4,8 @@
 	import Logo from './Logo.svelte';
 </script>
 
-<nav id="nav" class="lg:text-sm lg:leading-6 relative">
-	<div class="sticky pl-2.5 -ml-0.5 mt-4 mb-10 pointer-events-none">
+<nav id="nav" class="relative lg:text-sm lg:leading-6">
+	<div class="pointer-events-none sticky -ml-0.5 mt-4 mb-10 pl-2.5">
 		<Logo />
 	</div>
 	<ul class="space-y-4">
@@ -13,11 +13,11 @@
 			<a
 				on:click={overlay.close}
 				href="/"
-				class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg group dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="flex-shrink-0 w-6 h-6 {$page.url.pathname === '/'
+					class="h-6 w-6 flex-shrink-0 {$page.url.pathname === '/'
 						? 'text-sky-700 dark:text-sky-500'
 						: 'text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'} transition duration-75"
 					width="24"
@@ -33,7 +33,7 @@
 				<span
 					class="lg:leading-6 {$page.url.pathname === '/'
 						? 'font-medium text-sky-500 dark:text-sky-400'
-						: ''} flex-1 ml-3 whitespace-nowrap">Dashboard</span
+						: ''} ml-3 flex-1 whitespace-nowrap">Dashboard</span
 				>
 			</a>
 		</li>
@@ -41,11 +41,11 @@
 			<a
 				on:click={overlay.close}
 				href="/map"
-				class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg group dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="flex-shrink-0 w-6 h-6 {$page.url.pathname === '/map'
+					class="h-6 w-6 flex-shrink-0 {$page.url.pathname === '/map'
 						? 'text-sky-700 dark:text-sky-500'
 						: 'text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'} transition duration-75"
 					width="24"
@@ -66,7 +66,7 @@
 				<span
 					class="lg:leading-6 {$page.url.pathname === '/map'
 						? 'font-medium text-sky-500 dark:text-sky-400'
-						: ''} flex-1 ml-3 whitespace-nowrap">Map</span
+						: ''} ml-3 flex-1 whitespace-nowrap">Map</span
 				>
 			</a>
 		</li>
@@ -74,11 +74,11 @@
 			<a
 				on:click={overlay.close}
 				href="/saved"
-				class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg group dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="flex-shrink-0 w-6 h-6 {$page.url.pathname === '/saved'
+					class="h-6 w-6 flex-shrink-0 {$page.url.pathname === '/saved'
 						? 'text-sky-700 dark:text-sky-500'
 						: 'text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'} transition duration-75"
 					width="24"
@@ -96,25 +96,25 @@
 				<span
 					class="lg:leading-6 {$page.url.pathname === '/saved'
 						? 'font-medium text-sky-500 dark:text-sky-400'
-						: ''} flex-1 ml-3 whitespace-nowrap">Saved Locations</span
+						: ''} ml-3 flex-1 whitespace-nowrap">Saved Locations</span
 				>
 				<span
-					class="inline-flex justify-center items-center p-3 ml-3 w-3 h-3 text-sm font-medium text-blue-600 bg-blue-200 rounded-full dark:bg-blue-800 dark:text-blue-100"
+					class="ml-3 inline-flex h-3 w-3 items-center justify-center rounded-full bg-blue-200 p-3 text-sm font-medium text-blue-600 dark:bg-blue-800 dark:text-blue-100"
 					>3</span
 				>
 			</a>
 		</li>
 	</ul>
-	<ul class="pt-6 mt-6 space-y-4 border-t border-gray-200 dark:border-gray-700">
+	<ul class="mt-6 space-y-4 border-t border-gray-200 pt-6 dark:border-gray-700">
 		<li>
 			<a
 				on:click={overlay.close}
 				href="/settings"
-				class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg group dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="flex-shrink-0 w-6 h-6 {$page.url.pathname === '/settings'
+					class="h-6 w-6 flex-shrink-0 {$page.url.pathname === '/settings'
 						? 'text-sky-700 dark:text-sky-500'
 						: 'text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'} transition duration-75"
 					width="24"
@@ -132,7 +132,7 @@
 				<span
 					class="lg:leading-6 {$page.url.pathname === '/settings'
 						? 'font-medium text-sky-500 dark:text-sky-400'
-						: ''} flex-1 ml-3 whitespace-nowrap">Settings</span
+						: ''} ml-3 flex-1 whitespace-nowrap">Settings</span
 				>
 			</a>
 		</li>
@@ -140,11 +140,11 @@
 			<a
 				on:click={overlay.close}
 				href="/about"
-				class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
+				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="flex-shrink-0 w-6 h-6 {$page.url.pathname === '/about'
+					class="h-6 w-6 flex-shrink-0 {$page.url.pathname === '/about'
 						? 'text-sky-700 dark:text-sky-500'
 						: 'text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'} transition duration-75"
 					width="24"
@@ -165,7 +165,7 @@
 				<span
 					class="lg:leading-6 {$page.url.pathname === '/about'
 						? 'font-medium text-sky-500 dark:text-sky-400'
-						: ''} flex-1 ml-3 whitespace-nowrap">About</span
+						: ''} ml-3 flex-1 whitespace-nowrap">About</span
 				>
 			</a>
 		</li>
