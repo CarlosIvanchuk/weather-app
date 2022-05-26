@@ -1,7 +1,11 @@
 <script lang="ts">
 	import type { Location, Current } from '$lib/types';
-	
+
+	import { VIDEOS_BY_PLACE } from '$lib/data/videos';
+
 	export let location: Location, current: Current;
+
+	const CDN_URL = 'https://media.publit.io/file/';
 </script>
 
 <svelte:head>
@@ -12,11 +16,22 @@
 	/>
 </svelte:head>
 
-<div class="flex min-w-0 dark:bg-slate-900 flex-1 flex-shrink flex-col">
-	<div class="no-scrollbar flex-1 space-y-4 overflow-y-auto mt-8 px-8 dark:text-white">
-		<h1 class="text-lg">{location.name}</h1>
-		<div class="text-7xl font-bold">{current.temp_c}°</div>
-		<p>{current.condition.text}</p>
+<div class="flex min-w-0 flex-1 flex-shrink flex-col dark:bg-slate-900">
+	<div class="no-scrollbar flex-1 space-y-4 overflow-y-auto px-8 pt-8 dark:text-white">
+		<div class="relative h-60">
+			<div class="absolute inset-0 top-4 left-4 z-10 text-slate-700">
+				<h1 class="text-lg">{location.name}</h1>
+				<div class="text-7xl font-bold">{current.temp_c}°</div>
+				<p>{current.condition.text}</p>
+			</div>
+			<video
+				class="absolute h-full w-full rounded-xl object-cover"
+				src="{CDN_URL}{VIDEOS_BY_PLACE.japanMtFuji.day}"
+				muted
+				autoplay
+				loop
+			/>
+		</div>
 	</div>
 </div>
 
