@@ -13,7 +13,7 @@
 			<a
 				on:click={overlay.close}
 				href="/"
-				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-slate-100 dark:text-white dark:hover:bg-slate-700"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@
 			<a
 				on:click={overlay.close}
 				href="/map"
-				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-slate-100 dark:text-white dark:hover:bg-slate-700"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@
 			<a
 				on:click={overlay.close}
 				href="/saved"
-				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-slate-100 dark:text-white dark:hover:bg-slate-700"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -105,12 +105,12 @@
 			</a>
 		</li>
 	</ul>
-	<ul class="mt-6 space-y-4 border-t border-gray-200 pt-6 dark:border-gray-700">
+	<ul class="mt-6 space-y-4 border-t border-slate-200 pt-6 dark:border-slate-700">
 		<li>
 			<a
 				on:click={overlay.close}
 				href="/settings"
-				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-slate-100 dark:text-white dark:hover:bg-slate-700"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@
 			<a
 				on:click={overlay.close}
 				href="/about"
-				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-slate-100 dark:text-white dark:hover:bg-slate-700"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"

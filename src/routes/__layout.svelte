@@ -6,7 +6,7 @@
 
 <div class="h-screen flex">
 	<aside
-		class="hidden h-screen w-72 overflow-y-auto border-r border-gray-200 py-4 px-3 dark:border-gray-700 dark:bg-gray-800 lg:block"
+		class="hidden h-screen w-72 overflow-y-auto border-r border-slate-200 py-4 px-3 dark:border-slate-700 dark:bg-slate-900 lg:block"
 	>
 		<NavContent />
 	</aside>
