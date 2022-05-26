@@ -65,19 +65,19 @@ export const VIDEOS_BY_PLACE: IVideoRecord = {
 		night: 'ItsukishimaGateJapan-night.mp4'
 	},
 	japanMtFuji: {
+		day: 'Mt.FujiJapan-day.mp4',
+		sunset: 'Mt.FujiJapan-sunset.mp4',
+		night: 'Mt.FujiJapan-night.mp4'
+	},
+	lake: {
 		day: 'Lake-day-J.mp4',
 		sunset: 'Lake-sunset-L.mp4',
 		night: 'Lake-night-N.mp4'
 	},
-	lake: {
+	london: {
 		day: 'London-day.mp4',
 		sunset: 'London-sunset.mp4',
 		night: 'London-night.mp4'
-	},
-	london: {
-		day: 'Mt.FujiJapan-day.mp4',
-		sunset: 'Mt.FujiJapan-sunset.mp4',
-		night: 'Mt.FujiJapan-night.mp4'
 	},
 	philippines: {
 		day: 'Philippines-day.mp4',
