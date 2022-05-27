@@ -1,5 +1,6 @@
 <script>
 	import '../app.css';
+	import '../scrollbar.css'
 	import Overlay from '$lib/components/Overlay.svelte';
 	import NavContent from '$lib/components/NavContent.svelte';
 </script>
