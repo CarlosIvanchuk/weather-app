@@ -2,25 +2,61 @@
 /* Customize website's scrollbar like Mac OS
 Not supports in Firefox and IE */
 
-/* total width */
-body::-webkit-scrollbar {
-    background-color: #fff;
-    width: 16px;
+/* total width and height */
+::-webkit-scrollbar {
+	background-color: theme('colors.transparent');
+	width: 1em;
+	height: 1em; /* add height to fix horizontal scroll having a different width */
 }
 
 /* background of the scrollbar except button or resizer */
-body::-webkit-scrollbar-track {
-    background-color: #fff;
+::-webkit-scrollbar-track {
+	background-color: theme('colors.transparent');
+}
+
+::-webkit-scrollbar-track:hover {
+	background-color: theme('colors.slate.100'); /* Change background color when hovering scrollbar */
 }
 
 /* scrollbar itself */
-body::-webkit-scrollbar-thumb {
-    background-color: #babac0;
-    border-radius: 16px;
-    border: 4px solid #fff;
+::-webkit-scrollbar-thumb {
+	/* background-color: #babac0; */
+	background-color: theme('colors.transparent'); /* Hide scrollbar until hover */
+	border-radius: 1em;
+	/* border: 4px solid #fff; */
+	border: 4px solid theme('colors.transparent'); /* Hide scrollbar until hover */
+}
+
+:hover::-webkit-scrollbar-thumb {
+	background-color: #babac0;
+	border: 4px solid white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #a0a0a5; /* Change scrollbar background color when hovering scrollbar */
+	border: 4px solid theme('colors.slate.100'); /* Change scrollbar border color when hovering scrollbar */
 }
 
 /* set button(top and bottom of the scrollbar) */
-body::-webkit-scrollbar-button {
-    display:none;
+::-webkit-scrollbar-button {
+	display: none;
+}
+
+/* Dark Theme */
+.dark ::-webkit-scrollbar-track:hover {
+	background-color: theme('colors.slate.800');
+}
+
+.dark :hover::-webkit-scrollbar-thumb {
+	background-color: theme(
+		'colors.slate.600'
+	); /* Change scrollbar background color when hovering overflowed container */
+	border: 4px solid theme('colors.slate.900'); /* Change scrollbar border color when hovering overflowed container */
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+	background-color: theme(
+		'colors.slate.500'
+	); /* Change scrollbar background color when hovering scrollbar */
+	border: 4px solid theme('colors.slate.800'); /* Change scrollbar border color when hovering scrollbar */
 }
