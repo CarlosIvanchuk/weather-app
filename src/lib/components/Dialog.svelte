@@ -41,11 +41,11 @@
 
 			<TransitionChild
 				enter="ease-out duration-300"
-				enterFrom="opacity-0 scale-95"
-				enterTo="opacity-100 scale-100"
+				enterFrom="opacity-0 sm:scale-95"
+				enterTo="opacity-100 sm:scale-100"
 				leave="ease-in duration-200"
-				leaveFrom="opacity-100 scale-100"
-				leaveTo="opacity-0 scale-95"
+				leaveFrom="opacity-100 sm:scale-100"
+				leaveTo="opacity-0 sm:scale-95"
 			>
 				<!-- This element is to trick the browser into centering the modal contents. -->
 				<span class="inline-block h-screen align-middle" aria-hidden="true"> &#8203; </span>
