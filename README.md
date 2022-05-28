@@ -6,6 +6,8 @@ The favicon is a slightly modified version from [Weather Icons 1.1](https://www.
 
 The scenic illustrations are by [Pixel True](https://www.pixeltrue.com/scenic-illustrations)
 
+Weather Icon Pack by [Kmg Design](https://www.iconfinder.com/iconsets/weather-blue-filled-line)
+
 ## License
 
 MIT
