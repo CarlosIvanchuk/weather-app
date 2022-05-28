@@ -15,6 +15,7 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.21.0",
+		"@rgossiaux/svelte-headlessui": "^1.0.2",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"@tailwindcss/forms": "^0.5.2",
