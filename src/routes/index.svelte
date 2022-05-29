@@ -41,15 +41,35 @@
 	<div>
 		<header class="mt-4 mb-10 flex items-center justify-between">
 			<button>
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
-					<path d="m15 18-6-6 6-6"/>
-				</svg>				
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+				>
+					<path d="m15 18-6-6 6-6" />
+				</svg>
 			</button>
 			<span class="dark:text-white">This Week</span>
 			<button>
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
-					<path d="m9 18 6-6-6-6"/>
-				</svg>				
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+				>
+					<path d="m9 18 6-6-6-6" />
+				</svg>
 			</button>
 		</header>
 		<div class="space-y-4">
