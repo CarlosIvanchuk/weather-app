@@ -1,19 +1,17 @@
 <script lang="ts">
 	import { DialogDescription, DialogTitle } from '@rgossiaux/svelte-headlessui';
 	import Dialog from '$lib/components/Dialog.svelte';
+
+	export let isOpen = false;
 </script>
 
-<Dialog>
+<Dialog bind:isOpen>
 	<svelte:fragment let:closeModal>
-		<DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">
-			Settings
-		</DialogTitle>
+		<DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">Settings</DialogTitle>
 
 		<DialogDescription>
 			<div class="mt-2">
-				<p class="text-sm text-gray-500">
-					These are the settings that you can change
-				</p>
+				<p class="text-sm text-gray-500">These are the settings that you can change</p>
 			</div>
 		</DialogDescription>
 

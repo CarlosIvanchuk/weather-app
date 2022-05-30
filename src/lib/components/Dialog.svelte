@@ -3,29 +3,22 @@
 	import { scale, fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 
-	let isOpen = true;
+	export let isOpen = true;
 	let status = '';
 
 	function closeModal() {
 		isOpen = false;
 	}
-	function openModal() {
-		isOpen = true;
-	}
 </script>
 
-<div class="fixed inset-0 flex items-center justify-center">
-	<button
-		type="button"
-		on:click={openModal}
-		class="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-	>
-		Open dialog
-	</button>
-</div>
-
 {#if isOpen}
-	<Dialog as="div" open={isOpen} class="fixed inset-0 z-10 overflow-y-auto" on:close={closeModal}>
+	<Dialog
+		as="div"
+		open={isOpen}
+		class="fixed inset-0 z-10 overflow-y-auto"
+		on:open={() => (status = 'hello')}
+		on:close={closeModal}
+	>
 		<div class="min-h-screen px-4 text-center">
 			<div transition:fade={{ duration: 100 }}>
 				<DialogOverlay class="fixed inset-0 bg-black/20 backdrop-blur-sm dark:bg-slate-900/80" />
