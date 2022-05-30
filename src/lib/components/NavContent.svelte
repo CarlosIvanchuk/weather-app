@@ -2,6 +2,13 @@
 	import { page } from '$app/stores';
 	import { overlay } from '$lib/stores';
 	import Logo from './Logo.svelte';
+	import SettingsDialog from '$lib/components/SettingsDialog.svelte';
+
+	let isOpen = false;
+
+	function openModal() {
+		isOpen = true;
+	}
 </script>
 
 <nav id="nav" class="relative lg:text-sm lg:leading-6">
@@ -107,16 +114,14 @@
 	</ul>
 	<ul class="mt-6 space-y-4 border-t border-slate-200 pt-6 dark:border-slate-700">
 		<li>
-			<a
+			<button
 				on:click={overlay.close}
-				href="/settings"
-				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-slate-100 dark:text-white dark:hover:bg-slate-700"
+				on:click={openModal}
+				class="group flex w-full items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-slate-100 dark:text-white dark:hover:bg-slate-700"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="h-6 w-6 flex-shrink-0 {$page.url.pathname === '/settings'
-						? 'text-sky-700 dark:text-sky-500'
-						: 'text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'} transition duration-75"
+					class="h-6 w-6 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
 					width="24"
 					height="24"
 					viewBox="0 0 24 24"
@@ -129,12 +134,8 @@
 						d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
 					/></svg
 				>
-				<span
-					class="lg:leading-6 {$page.url.pathname === '/settings'
-						? 'font-medium text-sky-500 dark:text-sky-400'
-						: ''} ml-3 flex-1 whitespace-nowrap">Settings</span
-				>
-			</a>
+				<span class="ml-3 flex-1 whitespace-nowrap text-left lg:leading-6">Settings</span>
+			</button>
 		</li>
 		<li>
 			<a
@@ -171,3 +172,5 @@
 		</li>
 	</ul>
 </nav>
+
+<SettingsDialog bind:isOpen />
