@@ -115,7 +115,6 @@
 	<ul class="mt-6 space-y-4 border-t border-slate-200 pt-6 dark:border-slate-700">
 		<li>
 			<button
-				on:click={overlay.close}
 				on:click={openModal}
 				class="group flex w-full items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-slate-100 dark:text-white dark:hover:bg-slate-700"
 			>
