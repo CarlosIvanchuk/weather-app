@@ -1,11 +1,24 @@
 import type { RequestEvent } from '@sveltejs/kit';
 import type { Location, Current } from '$lib/types';
 
+let RAPIAPI_HOST;
+let RAPIAPI_KEY;
+
+if (process.env.NODE_ENV === 'production') {
+    // For production
+    RAPIAPI_HOST = process.env.RAPIDAPI_HOST;
+    RAPIAPI_KEY = process.env.RAPIDAPI_KEY;
+} else {
+    // For development
+    RAPIAPI_HOST = import.meta.env.VITE_RAPIDAPI_HOST
+    RAPIAPI_KEY = import.meta.env.VITE_RAPIDAPI_KEY
+}
+
 const FETCH_OPTIONS = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com',
-		'X-RapidAPI-Key': '71e59e906dmshfdc9ed284df2469p1b599cjsn0355f0f200d5'
+		'X-RapidAPI-Host': RAPIAPI_HOST,
+		'X-RapidAPI-Key': RAPIAPI_KEY
 	}
 };
 
