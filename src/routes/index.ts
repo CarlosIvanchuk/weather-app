@@ -12,7 +12,10 @@ const FETCH_OPTIONS = {
 /** @type {import('./__types/[id]').RequestHandler} */
 export async function get(event: RequestEvent) {
 	const { searchParams } = event.url;
-	const query = searchParams.get('q') ?? 'Tokyo';
+	const { clientAddress } = event;
+	console.log(clientAddress)
+	// const query = searchParams.get('q') ?? 'Tokyo';
+	const query = searchParams.get('q') ?? clientAddress
 	const lang = searchParams.get('lang') ?? 'es';
 
 	const response = await fetch(
