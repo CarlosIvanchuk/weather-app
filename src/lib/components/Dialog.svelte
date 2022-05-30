@@ -15,7 +15,7 @@
 	<Dialog
 		as="div"
 		open={isOpen}
-		class="fixed inset-0 z-10 overflow-y-auto"
+		class="fixed inset-0 z-50 overflow-y-auto"
 		on:open={() => (status = 'hello')}
 		on:close={closeModal}
 	>
