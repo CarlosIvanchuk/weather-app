@@ -1,8 +1,28 @@
 <script lang="ts">
 	import { DialogTitle } from '@rgossiaux/svelte-headlessui';
 	import Dialog from '$lib/components/Dialog.svelte';
+	import { settings } from '$lib/stores';
 
 	export let isOpen = false;
+
+	let settingOptions = [
+		{
+			name: 'Unidades de temperatura',
+			settingId: 'tempUnit',
+			options: [
+				{ id: 'temp_c', text: '°C' },
+				{ id: 'temp_f', text: '°F' }
+			]
+		},
+		{
+			name: 'Unidades de velocidad de viento',
+			settingId: 'windVelUnit',
+			options: [
+				{ id: 'wind_kph', text: 'km/h' },
+				{ id: 'wind_mph', text: 'mph' }
+			]
+		}
+	];
 </script>
 
 <Dialog bind:isOpen>
@@ -10,24 +30,20 @@
 		<DialogTitle as="h3" class="text-lg text-gray-900">Settings</DialogTitle>
 
 		<ul class="mt-4 space-y-4 border-t border-slate-200 pt-6 dark:border-slate-700">
-			<li class="flex items-center justify-between">
-				<span class="font-medium leading-5">Unidad de temperatura</span>
-				<select
-					class="block rounded-md border-0 py-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-				>
-					<option>°C</option>
-					<option>°F</option>
-				</select>
-			</li>
-			<li class="flex items-center justify-between">
-				<span class="font-medium leading-5">Unidad de velocidad de viento</span>
-				<select
-					class="block rounded-md border-0 py-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-				>
-					<option>km/h</option>
-					<option>mph</option>
-				</select>
-			</li>
+			{#each settingOptions as { name, settingId, options } (settingId)}
+				<li class="flex items-center justify-between">
+					<label for={settingId} class="font-medium leading-5">{name}</label>
+					<select
+						bind:value={$settings[settingId]}
+						id={settingId}
+						class="block rounded-md border-0 py-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+					>
+						{#each options as option (option.id)}
+							<option value={option.id}>{option.text}</option>
+						{/each}
+					</select>
+				</li>
+			{/each}
 		</ul>
 
 		<div class="mt-6">

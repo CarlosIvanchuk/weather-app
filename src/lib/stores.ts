@@ -11,3 +11,5 @@ function createToggle() {
 }
 
 export const overlay = createToggle();
+
+export const settings = writable({ tempUnit: 'temp_c', windVelUnit: 'wind_kph' });
