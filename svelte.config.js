@@ -7,9 +7,9 @@ const config = {
 		adapter: adapter(),
 		vite: {
 			define: {
-				'process.env': process.env,
-			},
-		},
+				'process.env': process.env
+			}
+		}
 	},
 
 	preprocess: [
