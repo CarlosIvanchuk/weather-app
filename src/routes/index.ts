@@ -13,7 +13,6 @@ const FETCH_OPTIONS = {
 export async function get(event: RequestEvent) {
 	const { searchParams } = event.url;
 	const { clientAddress } = event;
-	console.log(clientAddress)
 	// const query = searchParams.get('q') ?? 'Tokyo';
 	const query = searchParams.get('q') ?? clientAddress
 	const lang = searchParams.get('lang') ?? 'es';
