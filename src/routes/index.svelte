@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Location, Current } from '$lib/types';
-
+	
 	import Header from '$lib/components/Header.svelte';
 
 	import { VIDEOS_BY_PLACE } from '$lib/data/videos';
@@ -20,7 +20,7 @@
 
 <div class="flex min-w-0 flex-1 flex-shrink flex-col dark:bg-slate-900">
 	<div class="flex items-center border-b border-slate-900/10 md:border-0">
-		<Header />
+		<Header/>
 	</div>
 
 	<div class="no-scrollbar flex-1 space-y-4 overflow-y-auto px-8 pt-8 dark:text-white">
