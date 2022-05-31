@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
+	import { createEventDispatcher } from 'svelte';
 	import { fade } from 'svelte/transition';
 
 	type SearchResults = SearchObject[];
@@ -79,6 +80,8 @@
 		city = text;
 		items = [];
 	}
+	
+	const dispatch = createEventDispatcher()
 
 	$: {
 		selectedIndex = -1;
@@ -88,6 +91,7 @@
 
 	$: if (city.length > 0) {
 		goto(`/?q=${city}`);
+		dispatch('close');
 	}
 </script>
 
