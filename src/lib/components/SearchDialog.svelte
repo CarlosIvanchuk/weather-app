@@ -12,7 +12,7 @@
 			<label for="country">Search</label>
 		</DialogTitle>
 
-		<Autocomplete />
+		<Autocomplete on:close={closeModal} />
 
 		<div class="mt-6">
 			<button
