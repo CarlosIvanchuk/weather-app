@@ -3,6 +3,7 @@
 	import '../scrollbar.css';
 	import Overlay from '$lib/components/Overlay.svelte';
 	import NavContent from '$lib/components/NavContent.svelte';
+	import SvelteTheme from 'svelte-themes/SvelteTheme.svelte';
 </script>
 
 <div class="flex h-screen">
@@ -14,5 +15,7 @@
 
 	<slot />
 </div>
+
+<SvelteTheme attribute="class" />
 
 <Overlay />
