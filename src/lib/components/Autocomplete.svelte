@@ -98,7 +98,7 @@
 <div class="relative mt-4">
 	<div class="relative">
 		<input
-			class="w-full rounded-md border-slate-400"
+			class="w-full rounded-md border-slate-400 dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-400"
 			bind:value
 			on:keydown={keyboardSelect}
 			type="text"
@@ -129,7 +129,7 @@
 					<li
 						on:click={() => setValue(name)}
 						class:ring-2={selectedIndex == index}
-						class="cursor-pointer select-none rounded p-3 ring-blue-500 hover:bg-slate-100"
+						class="cursor-pointer select-none rounded p-3 ring-blue-500 hover:bg-slate-100 dark:hover:bg-slate-700"
 					>
 						{name}, {country}
 					</li>

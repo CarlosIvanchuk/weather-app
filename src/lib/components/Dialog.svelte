@@ -33,7 +33,7 @@
 				on:introend={() => (status = 'intro ended')}
 				on:outroend={() => (status = 'outro ended')}
 				class:rounded-2xl={status == 'intro started' || status == 'outro started'}
-				class="absolute inset-0 inline-block w-full transform overflow-hidden bg-white p-6 text-left align-middle transition-all sm:relative sm:my-8 sm:max-w-md sm:rounded-2xl sm:shadow-xl"
+				class="absolute inset-0 inline-block w-full transform overflow-hidden bg-white p-6 text-left align-middle transition-all dark:bg-slate-800 sm:relative sm:my-8 sm:max-w-md sm:rounded-2xl sm:shadow-xl"
 			>
 				<slot {closeModal} />
 			</div>
