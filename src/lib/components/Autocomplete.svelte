@@ -102,6 +102,7 @@
 			bind:value
 			on:keydown={keyboardSelect}
 			type="text"
+			placeholder="Type at least 3 characters"
 		/>
 		<svg
 			class:hidden={!loading}
