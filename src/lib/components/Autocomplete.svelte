@@ -38,10 +38,10 @@
 			controller = new AbortController();
 			let signal = controller.signal;
 			try {
-				let response = await fetch(
-					`https://weatherapi-com.p.rapidapi.com/search.json?q=${query}`,
-					{ ...FETCH_OPTIONS, signal }
-				);
+				let response = await fetch(`https://weatherapi-com.p.rapidapi.com/search.json?q=${query}`, {
+					...FETCH_OPTIONS,
+					signal
+				});
 				items = await response.json();
 				loading = false;
 			} catch (error) {
@@ -80,8 +80,8 @@
 		city = text;
 		items = [];
 	}
-	
-	const dispatch = createEventDispatcher()
+
+	const dispatch = createEventDispatcher();
 
 	$: {
 		selectedIndex = -1;

@@ -3,10 +3,10 @@
 	import { overlay } from '$lib/stores';
 	import SearchDialog from './SearchDialog.svelte';
 
-	let isOpen = false
+	let isOpen = false;
 
 	function openModal() {
-		isOpen = true
+		isOpen = true;
 	}
 </script>
 
