@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Search from '$lib/components/Search.svelte';
+	import Search from '$lib/components/SearchButton.svelte';
 	import { overlay } from '$lib/stores';
 </script>
 
