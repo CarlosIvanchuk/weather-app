@@ -3,6 +3,8 @@
 	import { overlay } from '$lib/stores';
 	import SearchDialog from './SearchDialog.svelte';
 
+	export let title: string
+
 	let isOpen = false;
 
 	function openModal() {
@@ -34,7 +36,7 @@
 	</div>
 	<!-- City Title -->
 	<div class="flex flex-1 items-center justify-center lg:hidden">
-		<div class="flex flex-shrink-0 items-center">Tokyo, Japan</div>
+		<div class="flex flex-shrink-0 items-center">{title}</div>
 	</div>
 	<!-- Search Button (Mobile) -->
 	<button
