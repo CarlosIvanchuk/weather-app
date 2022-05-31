@@ -3,7 +3,7 @@
 	import Dialog from '$lib/components/Dialog.svelte';
 	import Autocomplete from '$lib/components/Autocomplete.svelte';
 
-	export let isOpen = true;
+	export let isOpen = false;
 </script>
 
 <Dialog bind:isOpen>
