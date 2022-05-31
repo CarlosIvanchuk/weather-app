@@ -4,6 +4,8 @@
 	import SearchDialog from './SearchDialog.svelte';
 	import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@rgossiaux/svelte-headlessui';
 	import themeStore, { setTheme } from 'svelte-themes';
+	import { scale } from 'svelte/transition';
+	import { cubicInOut } from 'svelte/easing';
 
 	export let title: string;
 
@@ -60,7 +62,7 @@
 	<div class="relative ml-auto hidden items-center lg:flex">
 		<div class="ml-6 flex items-center border-l border-slate-200 pl-6 dark:border-slate-800">
 			<!-- Theme Dropdown (Desktop) -->
-			<Menu as="div" class="relative inline-flex items-center justify-center">
+			<Menu let:open as="div" class="relative inline-flex items-center justify-center">
 				<MenuButton class="inline-flex w-full justify-center rounded-md">
 						<span class="dark:hidden"
 							><svg
@@ -99,17 +101,11 @@
 							></span
 						>
 				</MenuButton>
-				<Transition
-					enter="transition ease-out duration-100"
-					enterFrom="transform opacity-0 scale-95"
-					enterTo="transform opacity-100 scale-100"
-					leave="transition ease-in duration-75"
-					leaveFrom="transform opacity-100 scale-100"
-					leaveTo="transform opacity-0 scale-95"
-				>
-					<MenuItems
+				{#if open}
+				<div transition:scale={{ start: 0.95, duration: 100, easing: cubicInOut, opacity: 0 }}>
+					<MenuItems static
 						class="dark:highlight-white/5 absolute top-full right-0 z-50 mt-8 w-36 overflow-hidden rounded-lg bg-white py-1 text-sm font-semibold text-slate-700 shadow-lg ring-1 ring-slate-900/10 dark:bg-slate-800 dark:text-slate-300 dark:ring-0"
-					>
+						>
 						<div class="px-1 py-1">
 							<MenuItem let:active>
 								<button
@@ -202,7 +198,8 @@
 							</MenuItem>
 						</div>
 					</MenuItems>
-				</Transition>
+				</div>
+				{/if}
 			</Menu>
 
 			<!-- Github Button (Desktop) -->
