@@ -17,7 +17,7 @@
 </script>
 
 <header
-	class="relative mx-4 mt-4 mb-4 flex flex-1 items-center justify-between dark:bg-slate-800 sm:px-2 md:mt-8 lg:mt-6 lg:px-4"
+	class="relative mx-4 mt-4 mb-4 flex flex-1 items-center justify-between dark:bg-slate-900 sm:px-2 md:mt-8 lg:mt-6 lg:px-4"
 >
 	<!-- Menu Button (Mobile) -->
 	<button
@@ -60,7 +60,7 @@
 	>
 	<!-- Theme & Github Buttons (Desktop) -->
 	<div class="relative ml-auto hidden items-center lg:flex">
-		<div class="ml-6 flex items-center border-l border-slate-200 pl-6 dark:border-slate-800">
+		<div class="ml-6 flex items-center border-l border-slate-200 pl-6 dark:border-slate-700">
 			<!-- Theme Dropdown (Desktop) -->
 			<Menu let:open as="div" class="relative inline-flex items-center justify-center">
 				<MenuButton class="inline-flex w-full justify-center rounded-md">
