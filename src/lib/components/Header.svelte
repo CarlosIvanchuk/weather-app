@@ -1,6 +1,13 @@
 <script lang="ts">
-	import Search from '$lib/components/SearchButton.svelte';
+	import SearchButton from '$lib/components/SearchButton.svelte';
 	import { overlay } from '$lib/stores';
+	import SearchDialog from './SearchDialog.svelte';
+
+	let isOpen = false
+
+	function openModal() {
+		isOpen = true
+	}
 </script>
 
 <header
@@ -23,7 +30,7 @@
 		></button
 	>
 	<div class="">
-		<Search />
+		<SearchButton on:click={openModal} />
 	</div>
 	<!-- City Title -->
 	<div class="flex flex-1 items-center justify-center lg:hidden">
@@ -31,6 +38,7 @@
 	</div>
 	<!-- Search Button (Mobile) -->
 	<button
+		on:click={openModal}
 		type="button"
 		class="-my-1 flex h-8 w-8 items-center justify-center text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300 lg:hidden"
 		><span class="sr-only">Search</span><svg
@@ -185,3 +193,5 @@
 		</div>
 	</div>
 </header>
+
+<SearchDialog bind:isOpen />
