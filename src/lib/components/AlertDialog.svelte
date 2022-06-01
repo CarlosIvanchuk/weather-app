@@ -7,11 +7,13 @@
 
 <Dialog bind:isOpen>
 	<svelte:fragment let:closeModal>
-		<DialogTitle as="h3" class="text-lg text-center font-semibold text-gray-900 dark:text-white">This doesn't work yet.</DialogTitle>
+		<DialogTitle as="h3" class="text-center text-lg font-semibold text-gray-900 dark:text-white"
+			>This doesn't work yet.</DialogTitle
+		>
 
 		<div class="mt-4 border-slate-200 dark:border-slate-700">
-            <img class='rounded-md' src="/charlesdeluvio-unsplash.jpg" alt="An ashamed puppy">
-        </div>
+			<img class="rounded-md" src="/charlesdeluvio-unsplash.jpg" alt="An ashamed puppy" />
+		</div>
 
 		<div class="mt-6">
 			<button

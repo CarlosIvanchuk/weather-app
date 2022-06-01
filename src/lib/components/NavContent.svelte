@@ -4,7 +4,7 @@
 	import Logo from './Logo.svelte';
 	import SettingsDialog from '$lib/components/SettingsDialog.svelte';
 	import ThemeMenu from './ThemeMenu.svelte';
-import AlertDialog from './AlertDialog.svelte';
+	import AlertDialog from './AlertDialog.svelte';
 
 	let isOpen = false;
 
@@ -17,8 +17,6 @@ import AlertDialog from './AlertDialog.svelte';
 	function openAlertModal() {
 		isAlertOpen = true;
 	}
-
-	
 </script>
 
 <nav id="nav" class="relative lg:text-sm lg:leading-6">
@@ -114,12 +112,12 @@ import AlertDialog from './AlertDialog.svelte';
 						? 'font-medium text-sky-500 dark:text-sky-400'
 						: ''} ml-3 flex-1 whitespace-nowrap">Saved Locations</span
 				>
-				<div class="flex-1 inline-flex w-full relative"></div>
+				<div class="relative inline-flex w-full flex-1" />
 				<span
 					class="ml-3 inline-flex h-3 w-3 items-center justify-center rounded-full bg-blue-200 p-3 text-sm font-medium text-blue-600 dark:bg-blue-800 dark:text-blue-100"
 					>3</span
 				>
-		</button>
+			</button>
 		</li>
 	</ul>
 	<ul class="mt-6 space-y-4 border-t border-slate-200 pt-6 dark:border-slate-700">

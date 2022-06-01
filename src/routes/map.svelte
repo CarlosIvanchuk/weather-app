@@ -43,7 +43,7 @@
 	<div class="flex items-center border-b border-slate-900/10 dark:border-slate-600 md:border-0">
 		<Header title={`${location.name}, ${location.country}`} />
 	</div>
-	
+
 	{#key location}
 		<Map {location} {current} />
 	{/key}
