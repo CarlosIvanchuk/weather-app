@@ -17,6 +17,7 @@
 		"@playwright/test": "^1.21.0",
 		"@rgossiaux/svelte-headlessui": "^1.0.2",
 		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-vercel": "next",
 		"@sveltejs/kit": "next",
 		"@tailwindcss/forms": "^0.5.2",
 		"@types/leaflet": "^1.7.10",
