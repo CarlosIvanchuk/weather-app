@@ -1,3 +1,30 @@
+<script context="module">
+	/** @type {import('./__types/[slug]').Load} */
+	export async function load({ fetch, url }) {
+		const { searchParams } = url;
+		const query = searchParams.get('q');
+
+		const res = await fetch(`/api/current?${query == null ? '' : 'q=' + query}`);
+
+		const { data, ok, error } = await res.json();
+
+		if (!ok) {
+			console.log(error)
+			return {
+				status: 400,
+				error: error.message
+			}
+		}
+		
+		const { current, location } = data;
+
+		return {
+			status: 200,
+			props: { current, location }
+		};
+	}
+</script>
+
 <script lang="ts">
 	import type { Location, Current } from '$lib/types';
 
