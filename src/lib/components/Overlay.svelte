@@ -6,7 +6,7 @@
 </script>
 
 {#if $overlay}
-	<div class="fixed inset-0 z-50 overflow-y-auto lg:hidden">
+	<div class="fixed inset-0 z-[9999] overflow-y-auto lg:hidden">
 		<div
 			transition:fade={{ duration: 300 }}
 			on:click={overlay.close}

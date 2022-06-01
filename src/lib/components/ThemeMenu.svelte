@@ -56,7 +56,7 @@
 		<div transition:scale={{ start: 0.95, duration: 100, easing: cubicInOut, opacity: 0 }}>
 			<MenuItems
 				static
-				class="dark:highlight-white/5 absolute top-full right-0 z-50 mt-8 w-36 overflow-hidden rounded-lg bg-white py-1 text-sm font-semibold text-slate-700 shadow-lg ring-1 ring-slate-900/10 dark:bg-slate-800 dark:text-slate-300 dark:ring-0"
+				class="dark:highlight-white/5 absolute top-full right-0 z-[9999] mt-8 w-36 overflow-hidden rounded-lg bg-white py-1 text-sm font-semibold text-slate-700 shadow-lg ring-1 ring-slate-900/10 dark:bg-slate-800 dark:text-slate-300 dark:ring-0"
 			>
 				<div class="px-1 py-1">
 					<MenuItem let:active>
