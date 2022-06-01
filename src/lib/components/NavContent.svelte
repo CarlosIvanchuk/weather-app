@@ -4,12 +4,21 @@
 	import Logo from './Logo.svelte';
 	import SettingsDialog from '$lib/components/SettingsDialog.svelte';
 	import ThemeMenu from './ThemeMenu.svelte';
+import AlertDialog from './AlertDialog.svelte';
 
 	let isOpen = false;
 
 	function openModal() {
 		isOpen = true;
 	}
+
+	let isAlertOpen = false;
+
+	function openAlertModal() {
+		isAlertOpen = true;
+	}
+
+	
 </script>
 
 <nav id="nav" class="relative lg:text-sm lg:leading-6">
@@ -79,10 +88,9 @@
 			</a>
 		</li>
 		<li>
-			<a
-				on:click={overlay.close}
-				href="/saved"
-				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-slate-100 dark:text-white dark:hover:bg-slate-700"
+			<button
+				on:click={openAlertModal}
+				class="group flex w-full items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-slate-100 dark:text-white dark:hover:bg-slate-700"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -106,11 +114,12 @@
 						? 'font-medium text-sky-500 dark:text-sky-400'
 						: ''} ml-3 flex-1 whitespace-nowrap">Saved Locations</span
 				>
+				<div class="flex-1 inline-flex w-full relative"></div>
 				<span
 					class="ml-3 inline-flex h-3 w-3 items-center justify-center rounded-full bg-blue-200 p-3 text-sm font-medium text-blue-600 dark:bg-blue-800 dark:text-blue-100"
 					>3</span
 				>
-			</a>
+		</button>
 		</li>
 	</ul>
 	<ul class="mt-6 space-y-4 border-t border-slate-200 pt-6 dark:border-slate-700">
@@ -187,3 +196,5 @@
 </nav>
 
 <SettingsDialog bind:isOpen />
+
+<AlertDialog bind:isOpen={isAlertOpen} />
