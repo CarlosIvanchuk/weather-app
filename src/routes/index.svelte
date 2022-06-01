@@ -28,10 +28,17 @@
 	import type { Location, Current } from '$lib/types';
 
 	import Header from '$lib/components/Header.svelte';
+	import AlertDialog from '$lib/components/AlertDialog.svelte';
 
 	import { VIDEOS_BY_PLACE } from '$lib/data/videos';
 
 	export let location: Location, current: Current;
+
+	let isOpen = false;
+
+	function openModal() {
+		isOpen = true;
+	}
 </script>
 
 <svelte:head>
@@ -70,7 +77,7 @@
 >
 	<div>
 		<header class="mt-4 mb-10 flex items-center justify-between">
-			<button>
+			<button on:click={openModal}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
@@ -86,7 +93,7 @@
 				</svg>
 			</button>
 			<span class="dark:text-white">This Week</span>
-			<button>
+			<button on:click={openModal}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
@@ -207,3 +214,5 @@
 		</div>
 	</div>
 </aside>
+
+<AlertDialog bind:isOpen />
