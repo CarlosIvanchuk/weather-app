@@ -6,8 +6,6 @@
 	import { VIDEOS_BY_PLACE } from '$lib/data/videos';
 
 	export let location: Location, current: Current;
-
-	const CDN_URL = 'https://media.publit.io/file/';
 </script>
 
 <svelte:head>
@@ -32,7 +30,7 @@
 			</div>
 			<video
 				class="absolute h-full w-full rounded-xl object-cover"
-				src="{CDN_URL}{VIDEOS_BY_PLACE.japanMtFuji.day}"
+				src="/{VIDEOS_BY_PLACE.japanMtFuji.day}"
 				muted
 				autoplay
 				loop
