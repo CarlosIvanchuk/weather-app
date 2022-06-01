@@ -3,6 +3,7 @@
 	import { overlay } from '$lib/stores';
 	import Logo from './Logo.svelte';
 	import SettingsDialog from '$lib/components/SettingsDialog.svelte';
+	import ThemeMenu from './ThemeMenu.svelte';
 
 	let isOpen = false;
 
@@ -169,6 +170,19 @@
 				>
 			</a>
 		</li>
+	</ul>
+	<ul class="mt-6 block space-y-4 border-t border-slate-200 pt-6 dark:border-slate-700 lg:hidden">
+		<label
+			class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-slate-100 dark:text-white dark:hover:bg-slate-700"
+		>
+			<span
+				class="lg:leading-6 {$page.url.pathname === '/saved'
+					? 'font-medium text-sky-500 dark:text-sky-400'
+					: ''} mr-3 flex-1 whitespace-nowrap">Switch Theme</span
+			>
+
+			<ThemeMenu />
+		</label>
 	</ul>
 </nav>
 
