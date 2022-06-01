@@ -44,5 +44,7 @@
 		<Header title={`${location.name}, ${location.country}`} />
 	</div>
 	
-	<Map {location} {current} />
+	{#key location}
+		<Map {location} {current} />
+	{/key}
 </div>
