@@ -28,7 +28,7 @@ export async function get(event: RequestEvent) {
 		params,
 		url: { searchParams }
 	} = event;
-	const query = searchParams.get('q') ?? clientAddress
+	const query = searchParams.get('q') ?? clientAddress;
 	const lang = searchParams.get('lang') ?? 'es';
 	const { endpoint } = params;
 

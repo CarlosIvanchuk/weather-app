@@ -9,13 +9,12 @@
 		const { data, ok, error } = await res.json();
 
 		if (!ok) {
-			console.log(error)
 			return {
 				status: 400,
 				error: error.message
-			}
+			};
 		}
-		
+
 		const { current, location } = data;
 
 		return {

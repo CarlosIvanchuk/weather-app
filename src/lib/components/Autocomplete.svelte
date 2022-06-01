@@ -3,7 +3,7 @@
 	import { goto } from '$app/navigation';
 	import { createEventDispatcher } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { page } from "$app/stores";
+	import { page } from '$app/stores';
 
 	type SearchResults = SearchObject[];
 
