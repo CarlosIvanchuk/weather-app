@@ -3,6 +3,7 @@
 	import { goto } from '$app/navigation';
 	import { createEventDispatcher } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import { page } from "$app/stores";
 
 	type SearchResults = SearchObject[];
 
@@ -90,7 +91,7 @@
 	}
 
 	$: if (city.length > 0) {
-		goto(`/?q=${city}`);
+		goto(`${$page.url.pathname}?q=${city}`);
 		dispatch('close');
 	}
 </script>
