@@ -147,14 +147,13 @@
 		<li>
 			<a
 				on:click={overlay.close}
-				href="/about"
+				href="https://github.com/CarlosIvanchuk/weather-app#rapidapi-weather"
+				target="_blank"
 				class="group flex items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-slate-100 dark:text-white dark:hover:bg-slate-700"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="h-6 w-6 flex-shrink-0 {$page.url.pathname === '/about'
-						? 'text-sky-700 dark:text-sky-500'
-						: 'text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'} transition duration-75"
+					class="dark:group-hover:text-white'} h-6 w-6 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400"
 					width="24"
 					height="24"
 					viewBox="0 0 24 24"
@@ -170,11 +169,20 @@
 						y2="8"
 					/></svg
 				>
-				<span
-					class="lg:leading-6 {$page.url.pathname === '/about'
-						? 'font-medium text-sky-500 dark:text-sky-400'
-						: ''} ml-3 flex-1 whitespace-nowrap">About</span
+				<span class="ml-3 flex-1 whitespace-nowrap lg:leading-6">About</span>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="hidden text-slate-500 hover:text-slate-900 group-hover:block dark:text-slate-400 dark:hover:text-white"
 				>
+					<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3" />
+				</svg>
 			</a>
 		</li>
 	</ul>
