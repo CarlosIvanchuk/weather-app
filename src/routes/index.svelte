@@ -30,7 +30,7 @@
 			</div>
 			<video
 				class="absolute h-full w-full rounded-xl object-cover"
-				src="/{VIDEOS_BY_PLACE.japanMtFuji.day}"
+				src="/videos/{VIDEOS_BY_PLACE.japanMtFuji.day}"
 				muted
 				autoplay
 				loop
