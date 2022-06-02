@@ -155,7 +155,7 @@
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="dark:group-hover:text-white'} h-6 w-6 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400"
+					class="h-6 w-6 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
 					width="24"
 					height="24"
 					viewBox="0 0 24 24"
