@@ -6,7 +6,7 @@
 	import SvelteTheme from 'svelte-themes/SvelteTheme.svelte';
 </script>
 
-<div class="flex h-screen">
+<div class="h-screen sm:flex">
 	<aside
 		class="hidden h-screen w-72 overflow-y-auto border-r border-slate-200 py-4 px-3 dark:border-slate-700 dark:bg-slate-900 lg:block"
 	>
