@@ -45,6 +45,43 @@
 		isOpen = true;
 	}
 
+	const AVAILABLE_VIDEOS = {
+		'United States of America': 'usa',
+		Egypt: 'egypt',
+		'United Kingdom': 'london',
+		France: 'france',
+		India: 'india',
+		Indonesia: 'indonesia',
+		Italy: 'italy',
+		Japan: 'japanMtFuji',
+		Philippines: 'philippines',
+		China: 'china',
+		Spain: 'street',
+		Venezuela: 'tropical',
+		Colombia: 'tropical'
+	};
+
+	function getVideoByCountry(country) {
+		const DEFAULT_VIDEOS = [
+			'city',
+			'desert',
+			'forest',
+			'hillsAndMountains',
+			'lake',
+			'seaTheLighthouse',
+			'seaTheShip',
+			'street',
+			'tropical',
+			'valley',
+			'snow'
+		];
+		if (!Object.keys(AVAILABLE_VIDEOS).includes(country)) {
+			let randomArrayIndex = Math.floor(Math.random() * DEFAULT_VIDEOS.length);
+			return DEFAULT_VIDEOS[randomArrayIndex];
+		}
+		return AVAILABLE_VIDEOS[country];
+	}
+
 	$: cards = [
 		{
 			title: 'Wind',
@@ -82,18 +119,22 @@
 
 	<div class="no-scrollbar flex-1 space-y-4 overflow-y-auto dark:text-white sm:px-8 sm:pt-8">
 		<div class="relative mb-8 h-96">
-			<div class="z-10 flex h-full flex-col items-center justify-center text-slate-700">
-				<h1 class="hidden text-xl lg:inline-block">{location.name}</h1>
-				<div class="text-8xl font-bold">
-					{$settings.tempUnit == 'temp_c' ? current.temp_c : current.temp_f}<span
-						class="align-super text-6xl">°</span
-					>
+			<div class="flex h-full items-center justify-center text-slate-800">
+				<div
+					class="z-20 flex w-auto flex-col items-center justify-center rounded-xl  bg-white/20 p-4 backdrop-blur-sm"
+				>
+					<h1 class="hidden text-center text-xl lg:inline-block">{location.name}</h1>
+					<div class="text-8xl font-bold">
+						{$settings.tempUnit == 'temp_c' ? current.temp_c : current.temp_f}<span
+							class="align-super text-6xl">°</span
+						>
+					</div>
+					<p class="text-xl ">{current.condition.text}</p>
 				</div>
-				<p class="text-xl ">{current.condition.text}</p>
 			</div>
 			<video
-				class="absolute inset-0 -z-10 h-full w-full object-cover sm:rounded-xl"
-				src="/videos/{VIDEOS_BY_PLACE.japanMtFuji.day}"
+				class="absolute inset-0 z-10 h-full w-full object-cover sm:rounded-xl"
+				src="/videos/{VIDEOS_BY_PLACE[getVideoByCountry(location.country)].day}"
 				muted
 				autoplay
 				loop
