@@ -5,6 +5,7 @@
 	import SettingsDialog from '$lib/components/SettingsDialog.svelte';
 	import ThemeMenu from './ThemeMenu.svelte';
 	import AlertDialog from './AlertDialog.svelte';
+	import { shortcut } from '$lib/actions';
 
 	let isOpen = false;
 
@@ -124,6 +125,7 @@
 		<li>
 			<button
 				on:click={openModal}
+				use:shortcut={{ control: true, shift: true, code: 'KeyP' }}
 				class="group flex w-full items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-slate-100 dark:text-white dark:hover:bg-slate-700"
 			>
 				<svg
