@@ -103,6 +103,32 @@
 			value: `${forecastday[0].hour[8].chance_of_snow}%`
 		}
 	];
+
+	function getDay(date) {
+		return new Date(date).toLocaleString('en-US', { day: 'numeric', month: 'short' });
+	}
+
+	function formatDay(date) {
+		const apiDate = new Date(date);
+		console.log('apidate: ', apiDate);
+		const today = new Date();
+		console.log('today: ', today);
+		let tomorrow = new Date();
+		const tomorrowDate = new Date(tomorrow.setDate(today.getDate() + 1));
+		console.log('tomorrowDate: ', tomorrowDate);
+
+		console.log('Today? ', apiDate.getDay() == today.getDay());
+
+		if (apiDate.getDay() == today.getDay()) {
+			return 'Today';
+		} else if (apiDate.getDay() == tomorrowDate.getDay()) {
+			return 'Tomorrow';
+		} else {
+			return apiDate.toLocaleString('default', { weekday: 'long' });
+		}
+	}
+
+	formatDay(current.last_updated);
 </script>
 
 <svelte:head>
@@ -314,15 +340,17 @@
 				</div>
 			</div>
 
-			{#each [{ title: 'Tomorrow', date: '28 May', temp: 20 }, { title: 'Sunday', date: '29 May', temp: 24 }, { title: 'Monday', date: '30 May', temp: 23 }, { title: 'Thursday', date: '31 May', temp: 21 }] as { title, date, temp }, index}
+			{#each forecastday as { day, hour }, index}
 				<div class="relative flex items-center justify-between rounded-lg py-2">
 					<div class="flex flex-col">
-						<span class="dark:text-white">{title}</span>
-						<span class="mt-1 text-sm text-slate-500 dark:text-slate-400">{date}</span>
+						<span class="dark:text-white">{formatDay(hour[1].time)}</span>
+						<span class="mt-1 text-sm text-slate-500 dark:text-slate-400"
+							>{getDay(hour[1].time)}</span
+						>
 					</div>
 
 					<div class="absolute inset-0 flex items-center justify-center">
-						<span class="text-lg font-medium dark:text-white">{temp}°</span>
+						<span class="text-lg font-medium dark:text-white">{$settings.tempUnit == "temp_c" ? day.avgtemp_c : day.avgtemp_f}°</span>
 					</div>
 					<svg
 						class:hidden={index % 2 != 0}
