@@ -120,4 +120,4 @@ export type ForecastDay = {
 			uv: number;
 		}
 	];
-};
+}[];
