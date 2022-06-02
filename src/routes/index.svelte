@@ -36,7 +36,7 @@
 	import WeatherIcons from '$lib/components/WeatherIcons.svelte';
 
 	import { VIDEOS_BY_PLACE } from '$lib/data/videos';
-	import { settings } from '$lib/stores';
+	import { settings } from '$lib/stores/index';
 
 	export let location: Location, current: Current, forecastday: ForecastDay;
 
@@ -63,7 +63,7 @@
 		Colombia: 'tropical'
 	};
 
-	function getVideoByCountry(country) {
+	function getVideoByCountry(country: string) {
 		const DEFAULT_VIDEOS = [
 			'city',
 			'desert',
@@ -105,11 +105,11 @@
 		}
 	];
 
-	function getDay(date) {
+	function getDay(date: string) {
 		return new Date(date).toLocaleString('en-US', { day: 'numeric', month: 'short' });
 	}
 
-	function formatDay(date) {
+	function formatDay(date: string) {
 		const apiDate = new Date(date);
 		const today = new Date();
 		let tomorrow = new Date();

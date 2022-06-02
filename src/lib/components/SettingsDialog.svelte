@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { DialogTitle } from '@rgossiaux/svelte-headlessui';
 	import Dialog from '$lib/components/Dialog.svelte';
-	import { settings } from '$lib/stores';
+	import { settings } from '$lib/stores/index';
 
 	export let isOpen = false;
 
