@@ -4,6 +4,7 @@
 	import { createEventDispatcher } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { page } from '$app/stores';
+	import { SUGGESTED_CITIES_ES } from '$lib/data/suggested-cities';
 
 	type SearchResults = SearchObject[];
 
@@ -137,5 +138,16 @@
 				{/each}
 			</ul>
 		</div>
+	{:else}
+		<ol class="mt-4">
+			{#each Object.entries(SUGGESTED_CITIES_ES) as [title, place]}
+				<li
+					on:click={() => (city = place)}
+					class="my-2 mr-2 inline-block w-auto cursor-pointer whitespace-nowrap rounded-l-full rounded-r-full border bg-slate-50 py-1 px-4 dark:border-slate-500 dark:bg-slate-700"
+				>
+					{title}
+				</li>
+			{/each}
+		</ol>
 	{/if}
 </div>

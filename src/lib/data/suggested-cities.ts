@@ -1,24 +1,15 @@
-export const SUGGESTED_CITIES_ES: string[] = [
-	'Pekín',
-	'Shanghái',
-	'Hong Kong',
-	'Taipéi',
-	'Yakarta',
-	'Delhi',
-	'Bombay',
-	'Moscú',
-	'Madrás',
-	'Estambul',
-	'Río de Janeiro',
-	'Singapur',
-	'Berlín',
-	'Roma',
-	'Nueva York',
-	'Los Ángeles',
-	'Chicago',
-	'Tokio',
-	'París',
-	'Bangkok',
-	'Seúl',
-	'Kuala Lumpur'
-];
+export const SUGGESTED_CITIES_ES = {
+	Shanghái: 'Shanghai', // China
+	Yakarta: 'Jakarta', // Indonesia
+	Delhi: 'Dehli', // India
+	Barcelona: 'Barcelona', // Spain
+	'El Cairo': 'Cairo', // Egypt
+	Manila: 'Manila', // Indonesia
+	Londres: 'London', // UK
+	Venecia: 'Venezia', // Italy
+	'Nueva York': 'New York', // USA
+	Tokio: 'Tokyo', // Japan
+	París: 'Paris', // France
+	Bangkok: 'Bangkok', // Thailandia
+	Caracas: 'Caracas' // Venezuela
+};
