@@ -15,7 +15,7 @@ const FETCH_OPTIONS = {
 
 async function getWeatherData({ endpoint, query, lang }) {
 	const response = await fetch(
-		`https://${RAPIDAPI_HOST}/${endpoint}.json?q=${query}&lang=${lang}`,
+		`https://${RAPIDAPI_HOST}/${endpoint}.json?q=${query}&lang=${lang}&days=3`,
 		FETCH_OPTIONS
 	);
 	return await response.json();
