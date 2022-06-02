@@ -57,6 +57,7 @@
 		Philippines: 'philippines',
 		China: 'china',
 		Spain: 'street',
+		London: 'london',
 		Venezuela: 'tropical',
 		Colombia: 'tropical'
 	};
