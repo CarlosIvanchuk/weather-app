@@ -14,7 +14,7 @@
 				stroke-width="2"
 				stroke-linecap="round"
 				stroke-linejoin="round"
-				class="h-6 w-6 lg:mr-2"
+				class="h-6 w-6"
 				><path
 					d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
 					class={$themeStore.theme == 'light'
@@ -30,7 +30,7 @@
 		>
 
 		<span class="hidden dark:inline"
-			><svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 lg:mr-2"
+			><svg viewBox="0 0 24 24" fill="none" class="h-6 w-6"
 				><path
 					fill-rule="evenodd"
 					clip-rule="evenodd"
@@ -59,12 +59,11 @@
 				class="dark:highlight-white/5 absolute top-full right-0 z-[9999] mt-8 w-36 overflow-hidden rounded-lg bg-white py-1 text-sm font-semibold text-slate-700 shadow-lg ring-1 ring-slate-900/10 dark:bg-slate-800 dark:text-slate-300 dark:ring-0"
 			>
 				<div class="px-1 py-1">
-					<MenuItem let:active>
+					<MenuItem let:active on:click={() => setTheme('light')}>
 						<button
-							on:click={() => setTheme('light')}
 							class:text-sky-500={$themeStore.theme == 'light'}
 							class="flex w-full cursor-pointer items-center {active
-								? 'bg-slate-50 dark:bg-slate-600/30'
+								? 'bg-slate-100 dark:bg-slate-600/30'
 								: ''} py-1 px-2 font-semibold"
 						>
 							<svg
@@ -89,12 +88,11 @@
 						</button>
 					</MenuItem>
 
-					<MenuItem let:active>
+					<MenuItem let:active on:click={() => setTheme('dark')}>
 						<button
-							on:click={() => setTheme('dark')}
 							class:text-sky-500={$themeStore.theme == 'dark'}
 							class="flex w-full cursor-pointer items-center {active
-								? 'bg-slate-50 dark:bg-slate-600/30'
+								? 'bg-slate-100 dark:bg-slate-600/30'
 								: ''} py-1 px-2 font-semibold"
 						>
 							<svg viewBox="0 0 24 24" fill="none" class="mr-2 h-6 w-6"
@@ -120,12 +118,11 @@
 						</button>
 					</MenuItem>
 
-					<MenuItem let:active>
+					<MenuItem let:active on:click={() => setTheme('system')}>
 						<button
-							on:click={() => setTheme('system')}
 							class:text-sky-500={$themeStore.theme == 'system'}
 							class="flex w-full cursor-pointer items-center {active
-								? 'bg-slate-50 dark:bg-slate-600/30'
+								? 'bg-slate-100 dark:bg-slate-600/30'
 								: ''} py-1 px-2 font-semibold"
 						>
 							<svg viewBox="0 0 24 24" fill="none" class="mr-2 h-6 w-6"
