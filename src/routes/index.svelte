@@ -111,14 +111,9 @@
 
 	function formatDay(date) {
 		const apiDate = new Date(date);
-		console.log('apidate: ', apiDate);
 		const today = new Date();
-		console.log('today: ', today);
 		let tomorrow = new Date();
 		const tomorrowDate = new Date(tomorrow.setDate(today.getDate() + 1));
-		console.log('tomorrowDate: ', tomorrowDate);
-
-		console.log('Today? ', apiDate.getDay() == today.getDay());
 
 		if (apiDate.getDay() == today.getDay()) {
 			return 'Today';
